@@ -82,18 +82,29 @@ const PackageTracker = () => {
   };
 
   return (
-    <section id="tracker" className="py-16 lg:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="tracker" 
+      className="py-16 lg:py-24 relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-avrimile-primary/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-avrimile-accent/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-400/10 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-purple-400/10 rounded-full animate-pulse"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-avrimile-secondary mb-4">
-            <Search className="inline-block mr-3 text-avrimile-primary" />
+            <Search className="inline-block mr-3 text-avrimile-primary animate-bounce" />
             Track Your Package
           </h2>
           <p className="text-xl text-avrimile-muted">Real-time tracking for all your deliveries across Nigeria</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 border border-white/50">
             <div className="flex flex-col items-center gap-4 mb-8">
               <div className="flex flex-col md:flex-row gap-4 w-full max-w-md">
                 <Input

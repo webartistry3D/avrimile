@@ -182,68 +182,70 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-avrimile-secondary mb-6">Get a Quote</h3>
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 border border-white/50">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Get a Quote</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-avrimile-secondary mb-2">Full Name</label>
-                <Input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => updateField('name', e.target.value)}
-                  className="w-full"
-                  data-testid="input-name"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Full Name</label>
+                  <Input
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => updateField('name', e.target.value)}
+                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    data-testid="input-name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Email Address</label>
+                  <Input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => updateField('email', e.target.value)}
+                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    data-testid="input-email"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Phone Number</label>
+                  <Input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => updateField('phone', e.target.value)}
+                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    data-testid="input-phone"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Service Needed</label>
+                  <Select value={formData.service} onValueChange={(value) => updateField('service', value)}>
+                    <SelectTrigger className="border-white/30 bg-white/20 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md" data-testid="select-service">
+                      <SelectValue placeholder="Select a service" className="text-gray-300" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="last-mile">Last Mile Delivery</SelectItem>
+                      <SelectItem value="express">Express Delivery</SelectItem>
+                      <SelectItem value="trucking">Trucking & Bulk Haulage</SelectItem>
+                      <SelectItem value="warehousing">Warehousing</SelectItem>
+                      <SelectItem value="inventory">Inventory Management</SelectItem>
+                      <SelectItem value="procurement">Procurement Services</SelectItem>
+                      <SelectItem value="ecommerce">e-Commerce Fulfillment</SelectItem>
+                      <SelectItem value="tracking">Real-Time Tracking</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-avrimile-secondary mb-2">Email Address</label>
-                <Input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => updateField('email', e.target.value)}
-                  className="w-full"
-                  data-testid="input-email"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-avrimile-secondary mb-2">Phone Number</label>
-                <Input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => updateField('phone', e.target.value)}
-                  className="w-full"
-                  data-testid="input-phone"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-avrimile-secondary mb-2">Service Needed</label>
-                <Select value={formData.service} onValueChange={(value) => updateField('service', value)}>
-                  <SelectTrigger className="w-full" data-testid="select-service">
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="last-mile">Last Mile Delivery</SelectItem>
-                    <SelectItem value="express">Express Delivery</SelectItem>
-                    <SelectItem value="trucking">Trucking & Bulk Haulage</SelectItem>
-                    <SelectItem value="warehousing">Warehousing</SelectItem>
-                    <SelectItem value="inventory">Inventory Management</SelectItem>
-                    <SelectItem value="procurement">Procurement Services</SelectItem>
-                    <SelectItem value="ecommerce">e-Commerce Fulfillment</SelectItem>
-                    <SelectItem value="tracking">Real-Time Tracking</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-avrimile-secondary mb-2">Message</label>
+                <label className="block text-sm font-medium text-white mb-2">Message</label>
                 <Textarea
                   value={formData.message}
                   onChange={(e) => updateField('message', e.target.value)}
                   rows={4}
-                  className="w-full resize-none"
+                  className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-2xl mx-auto resize-none"
                   placeholder="Tell us about your logistics needs..."
                   data-testid="textarea-message"
                 />
@@ -253,7 +255,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-fit bg-avrimile-primary hover:bg-avrimile-accent px-8 py-3"
+                  className="w-fit bg-avrimile-primary hover:bg-avrimile-accent px-8 py-3 shadow-lg"
                   data-testid="button-send-message"
                 >
                   {contactMutation.isPending ? (

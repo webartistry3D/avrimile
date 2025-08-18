@@ -8,10 +8,10 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const typingTexts = [
-    "Reliable logistics solutions",
-    "Fast delivery across Nigeria", 
-    "Professional supply chain management",
-    "Your trusted logistics partner"
+    "Reliable logistics solutions\nfor modern businesses",
+    "Fast delivery across Nigeria\nwith real-time tracking", 
+    "Professional supply chain\nmanagement services",
+    "Your trusted logistics partner\nfor seamless operations"
   ];
 
   const carouselImages = [
@@ -91,7 +91,7 @@ const Hero = () => {
               <span className="text-3xl md:text-4xl lg:text-5xl">Beyond Every Mile</span>
             </h1>
             <div className="mb-4">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-100 min-h-[3rem] flex items-center">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">
                 {typedText}
                 <span className="animate-pulse text-avrimile-primary ml-1">|</span>
               </h2>

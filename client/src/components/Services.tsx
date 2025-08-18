@@ -198,21 +198,23 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 transform hover:scale-105"
+              className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105 hover:bg-white/20"
               data-testid={`service-${index}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center mb-4 text-white">
+              <div className="w-16 h-16 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center mb-4 text-white shadow-lg">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-avrimile-secondary mb-3">{service.title}</h3>
-              <p className="text-avrimile-muted leading-relaxed mb-4">{service.description}</p>
-              <Button
-                onClick={() => setSelectedService(index)}
-                className="w-fit bg-avrimile-primary hover:bg-avrimile-accent text-white text-sm py-2 px-4 transition-all duration-300"
-                data-testid={`service-learn-more-${index}`}
-              >
-                Learn More
-              </Button>
+              <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-200 leading-relaxed mb-4">{service.description}</p>
+              <div className="flex justify-end">
+                <Button
+                  onClick={() => setSelectedService(index)}
+                  className="w-fit bg-avrimile-primary hover:bg-avrimile-accent text-white text-sm py-2 px-4 transition-all duration-300 shadow-lg"
+                  data-testid={`service-learn-more-${index}`}
+                >
+                  Learn More
+                </Button>
+              </div>
             </div>
           ))}
         </div>
