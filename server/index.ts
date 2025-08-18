@@ -62,6 +62,6 @@ app.use((req, res, next) => {
 
   // ✅ Removed reusePort, not supported on Windows
   server.listen(port, "0.0.0.0", () => {
-    log(`🚀 Serving on http://${host}:${port}`);
+    log(`🚀 Serving on http://0.0.0.0:${port}`);
   });
 })();
