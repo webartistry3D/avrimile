@@ -192,7 +192,8 @@ const Contact = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateField('name', e.target.value)}
-                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    placeholder="Enter your full name"
                     data-testid="input-name"
                   />
                 </div>
@@ -203,7 +204,8 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateField('email', e.target.value)}
-                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    placeholder="your.email@example.com"
                     data-testid="input-email"
                   />
                 </div>
@@ -214,7 +216,8 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateField('phone', e.target.value)}
-                    className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    placeholder="+234 XXX XXX XXXX"
                     data-testid="input-phone"
                   />
                 </div>
@@ -222,10 +225,10 @@ const Contact = () => {
                 <div>
                   <label className="block text-sm font-medium text-white mb-2">Service Needed</label>
                   <Select value={formData.service} onValueChange={(value) => updateField('service', value)}>
-                    <SelectTrigger className="border-white/30 bg-white/20 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md" data-testid="select-service">
-                      <SelectValue placeholder="Select a service" className="text-gray-300" />
+                    <SelectTrigger className="border-white/50 bg-white/30 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md" data-testid="select-service">
+                      <SelectValue placeholder="Select a service" className="text-gray-200" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white/95 backdrop-blur-md border-white/50">
                       <SelectItem value="last-mile">Last Mile Delivery</SelectItem>
                       <SelectItem value="express">Express Delivery</SelectItem>
                       <SelectItem value="trucking">Trucking & Bulk Haulage</SelectItem>
@@ -245,7 +248,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => updateField('message', e.target.value)}
                   rows={4}
-                  className="border-white/30 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-2xl mx-auto resize-none"
+                  className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-2xl mx-auto resize-none"
                   placeholder="Tell us about your logistics needs..."
                   data-testid="textarea-message"
                 />

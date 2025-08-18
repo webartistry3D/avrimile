@@ -221,9 +221,15 @@ const Services = () => {
 
         {/* Service Modal */}
         {selectedService !== null && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            onClick={closeModal}
+          >
+            <div 
+              className="bg-white/95 backdrop-blur-md rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/30 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-white/30 p-6 flex justify-between items-center">
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center mr-4 text-white">
                     {services[selectedService].icon}

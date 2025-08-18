@@ -2,120 +2,94 @@ const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offsetTop = section.offsetTop - 64;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <footer className="bg-avrimile-secondary text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <div className="ml-3">
-                <div className="text-xl font-bold">AVRIMILE</div>
-                <div className="text-xs text-blue-300 uppercase tracking-wide">Beyond Every Mile</div>
-              </div>
-            </div>
-            <p className="text-blue-200 leading-relaxed mb-6">
-              Delivering innovative logistics solutions across Nigeria with reliability, speed, and precision. Your trusted partner for all supply chain needs.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-2xl font-bold text-avrimile-primary mb-4">AVRIMILE</h3>
+            <p className="text-gray-300 leading-relaxed">
+              Beyond Every Mile - Your trusted logistics partner for reliable delivery and supply chain solutions across Nigeria.
             </p>
           </div>
-          
+
+          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2 text-blue-200">
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-last-mile"
+                <button 
+                  onClick={() => scrollToSection('home')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
                 >
-                  Last Mile Delivery
+                  Home
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-express"
+                <button 
+                  onClick={() => scrollToSection('services')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
                 >
-                  Express Delivery
+                  Services
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-warehousing"
+                <button 
+                  onClick={() => scrollToSection('tracker')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
                 >
-                  Warehousing
+                  Track Package
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-tracking"
+                <button 
+                  onClick={() => scrollToSection('about')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
                 >
-                  Real-Time Tracking
-                </button>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2 text-blue-200">
-              <li>
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-about"
-                >
-                  About Us
+                  About
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('blog')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-blog"
-                >
-                  Blog
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-contact"
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
                 >
                   Contact
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('faqs')}
-                  className="hover:text-avrimile-primary transition-colors duration-200"
-                  data-testid="footer-link-faqs"
-                >
-                  FAQs
-                </button>
-              </li>
             </ul>
           </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-2 text-gray-300">
+              <p className="flex items-center">
+                <span className="mr-2">📧</span> info@avrimile.ng
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">📞</span> +234 700 800 9000
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">📍</span> Lagos, Nigeria
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <div className="border-t border-blue-800 pt-8 text-center text-blue-300">
-          <p>&copy; 2025 Avrimile Enterprises. All rights reserved. | Beyond Every Mile</p>
+
+        {/* Bottom Section */}
+        <div className="pt-8 border-t border-gray-600 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © 2025 Avrimile Enterprises. All rights reserved.
+          </p>
+          <p className="text-gray-400 text-sm mt-2 sm:mt-0">
+            Created by <span className="text-avrimile-primary font-medium">WebArtistry Creations</span>
+          </p>
         </div>
       </div>
     </footer>
