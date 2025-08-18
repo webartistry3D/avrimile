@@ -127,8 +127,8 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
               <div className="w-12 h-12 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="text-white text-lg" />
               </div>
@@ -138,7 +138,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
               <div className="w-12 h-12 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center flex-shrink-0">
                 <Phone className="text-white text-lg" />
               </div>
@@ -148,7 +148,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4">
               <div className="w-12 h-12 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="text-white text-lg" />
               </div>
@@ -160,8 +160,8 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <div className="pt-8">
-              <h3 className="font-semibold text-white mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
+              <h3 className="font-semibold text-white mb-4 text-center lg:text-left">Follow Us</h3>
+              <div className="flex justify-center lg:justify-start space-x-4">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;
                   return (
@@ -185,47 +185,47 @@ const Contact = () => {
           <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 border border-white/50">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">Get a Quote</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">Full Name</label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+                <div className="w-full max-w-md">
+                  <label className="block text-sm font-medium text-white mb-2 text-center">Full Name</label>
                   <Input
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateField('name', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
                     placeholder="Enter your full name"
                     data-testid="input-name"
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">Email Address</label>
+                <div className="w-full max-w-md">
+                  <label className="block text-sm font-medium text-white mb-2 text-center">Email Address</label>
                   <Input
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateField('email', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
                     placeholder="your.email@example.com"
                     data-testid="input-email"
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">Phone Number</label>
+                <div className="w-full max-w-md">
+                  <label className="block text-sm font-medium text-white mb-2 text-center">Phone Number</label>
                   <Input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateField('phone', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-md"
+                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
                     placeholder="+234 XXX XXX XXXX"
                     data-testid="input-phone"
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">Service Needed</label>
+                <div className="w-full max-w-md">
+                  <label className="block text-sm font-medium text-white mb-2 text-center">Service Needed</label>
                   <Select value={formData.service} onValueChange={(value) => updateField('service', value)}>
-                    <SelectTrigger className="border-white/50 bg-white/30 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full max-w-md" data-testid="select-service">
+                    <SelectTrigger className="border-white/50 bg-white/30 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full" data-testid="select-service">
                       <SelectValue placeholder="Select a service" className="text-gray-200" />
                     </SelectTrigger>
                     <SelectContent className="bg-white/95 backdrop-blur-md border-white/50">
@@ -242,13 +242,13 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">Message</label>
+              <div className="flex flex-col items-center">
+                <label className="block text-sm font-medium text-white mb-2 text-center">Message</label>
                 <Textarea
                   value={formData.message}
                   onChange={(e) => updateField('message', e.target.value)}
                   rows={4}
-                  className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-2xl mx-auto resize-none"
+                  className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-2xl resize-none"
                   placeholder="Tell us about your logistics needs..."
                   data-testid="textarea-message"
                 />

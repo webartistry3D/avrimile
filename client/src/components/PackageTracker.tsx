@@ -106,20 +106,20 @@ const PackageTracker = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 border border-white/50">
             <div className="flex flex-col items-center gap-4 mb-8">
-              <div className="flex flex-col md:flex-row gap-4 w-full max-w-md">
+              <div className="flex flex-col md:flex-row gap-4 w-full max-w-md mx-auto">
                 <Input
                   type="text"
                   placeholder="Enter Tracking ID..."
                   value={trackingId}
                   onChange={(e) => setTrackingId(e.target.value)}
-                  className="flex-1 text-lg"
+                  className="flex-1 text-lg text-center"
                   data-testid="input-tracking-id"
                   onKeyPress={(e) => e.key === 'Enter' && handleTrack()}
                 />
                 <Button
                   onClick={handleTrack}
                   disabled={isLoading}
-                  className="bg-avrimile-primary hover:bg-avrimile-accent w-fit px-6 self-center"
+                  className="bg-avrimile-primary hover:bg-avrimile-accent w-fit px-6 mx-auto"
                   data-testid="button-track"
                 >
                   {isLoading ? (
@@ -138,7 +138,7 @@ const PackageTracker = () => {
             </div>
 
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8" data-testid="tracking-error">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 text-center max-w-md mx-auto" data-testid="tracking-error">
                 <p className="text-red-800 font-medium">Package not found</p>
                 <p className="text-red-600 text-sm mt-1">
                   Please check your tracking ID and try again. Contact support if the issue persists.
@@ -148,30 +148,30 @@ const PackageTracker = () => {
 
             {packageData && (
               <div className="mb-8" data-testid="tracking-result">
-                <div className="mb-6 bg-gray-50 rounded-lg p-4">
-                  <h3 className="font-bold text-avrimile-secondary text-lg mb-2">Package Details</h3>
+                <div className="mb-6 bg-gray-50 rounded-lg p-6 text-center max-w-2xl mx-auto">
+                  <h3 className="font-bold text-avrimile-secondary text-lg mb-4">Package Details</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="text-avrimile-muted">From:</span> 
-                      <span className="text-avrimile-secondary font-medium ml-2">{packageData.pickupLocation}</span>
+                    <div className="text-center">
+                      <span className="text-avrimile-muted block">From:</span> 
+                      <span className="text-avrimile-secondary font-medium">{packageData.pickupLocation}</span>
                     </div>
-                    <div>
-                      <span className="text-avrimile-muted">To:</span> 
-                      <span className="text-avrimile-secondary font-medium ml-2">{packageData.deliveryLocation}</span>
+                    <div className="text-center">
+                      <span className="text-avrimile-muted block">To:</span> 
+                      <span className="text-avrimile-secondary font-medium">{packageData.deliveryLocation}</span>
                     </div>
-                    <div>
-                      <span className="text-avrimile-muted">Sender:</span> 
-                      <span className="text-avrimile-secondary font-medium ml-2">{packageData.senderName}</span>
+                    <div className="text-center">
+                      <span className="text-avrimile-muted block">Sender:</span> 
+                      <span className="text-avrimile-secondary font-medium">{packageData.senderName}</span>
                     </div>
-                    <div>
-                      <span className="text-avrimile-muted">Recipient:</span> 
-                      <span className="text-avrimile-secondary font-medium ml-2">{packageData.recipientName}</span>
+                    <div className="text-center">
+                      <span className="text-avrimile-muted block">Recipient:</span> 
+                      <span className="text-avrimile-secondary font-medium">{packageData.recipientName}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Tracking History with Connecting Trail */}
-                <div className="relative">
+                <div className="relative max-w-2xl mx-auto">
                   {packageData.trackingHistory.map((event, index) => {
                     const isCompleted = true; // All historical events are completed
                     const isLast = index === packageData.trackingHistory.length - 1;

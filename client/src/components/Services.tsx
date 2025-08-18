@@ -222,12 +222,14 @@ const Services = () => {
         {/* Service Modal */}
         {selectedService !== null && (
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4"
             onClick={closeModal}
+            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
           >
             <div 
-              className="bg-white/95 backdrop-blur-md rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/30 shadow-2xl"
+              className="bg-white/95 backdrop-blur-md rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/30 shadow-2xl transform translate-y-0"
               onClick={(e) => e.stopPropagation()}
+              style={{ margin: 'auto' }}
             >
               <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-white/30 p-6 flex justify-between items-center">
                 <div className="flex items-center">
