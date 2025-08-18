@@ -211,7 +211,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={contactMutation.isPending}
-                className="w-full bg-avrimile-primary hover:bg-avrimile-accent"
+                className="w-fit bg-avrimile-primary hover:bg-avrimile-accent px-8 py-3"
                 data-testid="button-send-message"
               >
                 {contactMutation.isPending ? (

@@ -8,6 +8,16 @@ This is a modern logistics and supply chain management platform for Avrimile Ent
 
 Preferred communication style: Simple, everyday language.
 
+### Recent Improvements (August 18, 2025)
+- Navigation menu should be compact and not wider than text on all screens
+- Navigation order updated: Home > Services > Package Tracker > About > Blog > Contact 
+- All buttons should be sized to fit their text length (w-fit instead of full width)
+- Service cards need "Learn More" buttons with detailed modal popups
+- Prefer visually compelling animated icons over static ones
+- Package tracker should show connecting trails between tracking points
+- Animated navigation menu tray open/close actions
+- Smooth section animations during navigation
+
 ## System Architecture
 
 ### Frontend Architecture

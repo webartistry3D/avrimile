@@ -27,20 +27,34 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offsetTop = section.offsetTop - 64;
+      // Add fade out animation to current section
+      const currentSection = document.querySelector('section.animate-in');
+      if (currentSection) {
+        currentSection.classList.remove('animate-in');
+        currentSection.classList.add('animate-out');
+      }
+
+      const offsetTop = (section as HTMLElement).offsetTop - 64;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
       });
+      
+      // Add fade in animation to target section after scroll
+      setTimeout(() => {
+        section.classList.remove('animate-out');
+        section.classList.add('animate-in');
+      }, 100);
+      
       setMobileMenuOpen(false);
     }
   };
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
     { id: 'services', label: 'Our Services' },
     { id: 'tracker', label: 'Package Tracker' },
+    { id: 'about', label: 'About Us' },
     { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact Us' }
   ];
@@ -100,26 +114,31 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-3 py-2 font-medium transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? 'text-avrimile-primary'
-                    : 'text-avrimile-muted hover:text-avrimile-primary'
-                }`}
-                data-testid={`mobile-nav-${item.id}`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+      <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out overflow-hidden ${
+        mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {navItems.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`block w-full text-left px-3 py-2 font-medium transition-all duration-300 transform ${
+                mobileMenuOpen 
+                  ? 'translate-x-0 opacity-100' 
+                  : 'translate-x-4 opacity-0'
+              } ${
+                activeSection === item.id
+                  ? 'text-avrimile-primary'
+                  : 'text-avrimile-muted hover:text-avrimile-primary'
+              }`}
+              style={{ transitionDelay: `${index * 50}ms` }}
+              data-testid={`mobile-nav-${item.id}`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

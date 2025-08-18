@@ -56,7 +56,7 @@ const Blog = () => {
                   {post.description}
                 </p>
                 <button
-                  className="text-avrimile-primary font-semibold hover:text-avrimile-accent transition-colors duration-200 flex items-center"
+                  className="text-avrimile-primary font-semibold hover:text-avrimile-accent transition-colors duration-200 flex items-center w-fit py-2 px-1"
                   data-testid={`blog-read-more-${index}`}
                 >
                   Read More <ArrowRight className="ml-1 h-4 w-4" />

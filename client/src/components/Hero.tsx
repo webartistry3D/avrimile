@@ -30,7 +30,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToServices}
-                className="bg-avrimile-primary hover:bg-avrimile-accent text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                className="bg-avrimile-primary hover:bg-avrimile-accent text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center w-fit"
                 data-testid="button-learn-more"
               >
                 Learn More
@@ -38,7 +38,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={scrollToContact}
-                className="bg-transparent border-2 border-avrimile-primary text-avrimile-primary hover:bg-avrimile-primary hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                className="bg-transparent border-2 border-avrimile-primary text-avrimile-primary hover:bg-avrimile-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-fit"
                 data-testid="button-request-quote"
               >
                 Request a Quote

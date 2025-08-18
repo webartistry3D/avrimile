@@ -107,7 +107,7 @@ const PackageTracker = () => {
               <Button
                 onClick={handleTrack}
                 disabled={isLoading}
-                className="bg-avrimile-primary hover:bg-avrimile-accent"
+                className="bg-avrimile-primary hover:bg-avrimile-accent w-fit px-6"
                 data-testid="button-track"
               >
                 {isLoading ? (
@@ -134,7 +134,7 @@ const PackageTracker = () => {
             )}
 
             {packageData && (
-              <div className="border-l-4 border-avrimile-primary pl-6 space-y-6 mb-8" data-testid="tracking-result">
+              <div className="mb-8" data-testid="tracking-result">
                 <div className="mb-6 bg-gray-50 rounded-lg p-4">
                   <h3 className="font-bold text-avrimile-secondary text-lg mb-2">Package Details</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -157,23 +157,41 @@ const PackageTracker = () => {
                   </div>
                 </div>
 
-                {packageData.trackingHistory.map((event, index) => {
-                  const isCompleted = index < packageData.trackingHistory.length;
-                  return (
-                    <div key={index} className="flex items-center space-x-4" data-testid={`tracking-event-${index}`}>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        isCompleted ? 'bg-avrimile-primary text-white' : 'bg-gray-300 text-white'
-                      }`}>
-                        {getStatusIcon(event.status)}
+                {/* Tracking History with Connecting Trail */}
+                <div className="relative">
+                  {packageData.trackingHistory.map((event, index) => {
+                    const isCompleted = true; // All historical events are completed
+                    const isLast = index === packageData.trackingHistory.length - 1;
+                    
+                    return (
+                      <div key={index} className="relative" data-testid={`tracking-event-${index}`}>
+                        {/* Connecting line */}
+                        {!isLast && (
+                          <div className="absolute left-4 top-12 w-0.5 h-16 bg-gradient-to-b from-avrimile-primary to-avrimile-accent"></div>
+                        )}
+                        
+                        <div className="flex items-start space-x-4 pb-8">
+                          <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                            isCompleted ? 'bg-avrimile-primary text-white shadow-lg' : 'bg-gray-300 text-white'
+                          }`}>
+                            {getStatusIcon(event.status)}
+                            {/* Pulse animation for current status */}
+                            {index === packageData.trackingHistory.length - 1 && (
+                              <div className="absolute inset-0 rounded-full bg-avrimile-primary animate-ping opacity-25"></div>
+                            )}
+                          </div>
+                          
+                          <div className="flex-1 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+                            <h4 className="font-semibold text-avrimile-secondary text-lg">{formatStatus(event.status)}</h4>
+                            <p className="text-avrimile-muted text-sm mb-1">{event.location}</p>
+                            <p className="text-avrimile-primary text-sm font-medium mb-2">{formatDate(event.timestamp)}</p>
+                            <p className="text-sm text-gray-600">{event.description}</p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-avrimile-secondary">{formatStatus(event.status)}</h4>
-                        <p className="text-avrimile-muted text-sm">{event.location} - {formatDate(event.timestamp)}</p>
-                        <p className="text-sm text-gray-600">{event.description}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             )}
 
