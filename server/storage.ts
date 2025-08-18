@@ -79,6 +79,11 @@ export class MemStorage implements IStorage {
         location: string;
         timestamp: string;
         description: string;
+      }> as Array<{
+        status: string;
+        location: string;
+        timestamp: string;
+        description: string;
       }>
     };
     this.packages.set(newPackage.trackingId, newPackage);
