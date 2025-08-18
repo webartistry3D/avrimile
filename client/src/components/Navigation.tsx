@@ -64,12 +64,12 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`font-medium transition-colors duration-200 ${
+                  className={`px-3 py-2 font-medium transition-colors duration-200 whitespace-nowrap ${
                     activeSection === item.id
                       ? 'text-avrimile-primary'
                       : 'text-avrimile-muted hover:text-avrimile-primary'
