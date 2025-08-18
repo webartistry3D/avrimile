@@ -61,7 +61,7 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -114,15 +114,15 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out overflow-hidden ${
-        mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-      }`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div className={`md:hidden absolute top-full right-0 bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+        mobileMenuOpen ? 'max-h-96 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
+      }`} style={{ minWidth: 'max-content' }}>
+        <div className="px-3 py-2 space-y-1">
           {navItems.map((item, index) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`block w-full text-left px-3 py-2 font-medium transition-all duration-300 transform ${
+              className={`block w-full text-left px-3 py-2 font-medium transition-all duration-300 transform whitespace-nowrap ${
                 mobileMenuOpen 
                   ? 'translate-x-0 opacity-100' 
                   : 'translate-x-4 opacity-0'

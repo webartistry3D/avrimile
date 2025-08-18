@@ -27,7 +27,7 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
               Reliable logistics, sourcing, and inventory management solutions for MSMEs and individuals across Nigeria.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={scrollToServices}
                 className="bg-avrimile-primary hover:bg-avrimile-accent text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center w-fit"

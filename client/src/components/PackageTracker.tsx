@@ -94,34 +94,36 @@ const PackageTracker = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <Input
-                type="text"
-                placeholder="Enter Tracking ID..."
-                value={trackingId}
-                onChange={(e) => setTrackingId(e.target.value)}
-                className="flex-1 text-lg"
-                data-testid="input-tracking-id"
-                onKeyPress={(e) => e.key === 'Enter' && handleTrack()}
-              />
-              <Button
-                onClick={handleTrack}
-                disabled={isLoading}
-                className="bg-avrimile-primary hover:bg-avrimile-accent w-fit px-6"
-                data-testid="button-track"
-              >
-                {isLoading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Tracking...
-                  </>
-                ) : (
-                  <>
-                    <Search className="mr-2 h-4 w-4" />
-                    Track
-                  </>
-                )}
-              </Button>
+            <div className="flex flex-col items-center gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 w-full max-w-md">
+                <Input
+                  type="text"
+                  placeholder="Enter Tracking ID..."
+                  value={trackingId}
+                  onChange={(e) => setTrackingId(e.target.value)}
+                  className="flex-1 text-lg"
+                  data-testid="input-tracking-id"
+                  onKeyPress={(e) => e.key === 'Enter' && handleTrack()}
+                />
+                <Button
+                  onClick={handleTrack}
+                  disabled={isLoading}
+                  className="bg-avrimile-primary hover:bg-avrimile-accent w-fit px-6 self-center"
+                  data-testid="button-track"
+                >
+                  {isLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      Tracking...
+                    </>
+                  ) : (
+                    <>
+                      <Search className="mr-2 h-4 w-4" />
+                      Track
+                    </>
+                  )}
+                </Button>
+              </div>
             </div>
 
             {error && (

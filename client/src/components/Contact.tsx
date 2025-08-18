@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -74,11 +74,41 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: 'fab fa-facebook-f', url: '#', color: 'bg-blue-600 hover:bg-blue-700' },
-    { name: 'Twitter', icon: 'fab fa-twitter', url: '#', color: 'bg-blue-400 hover:bg-blue-500' },
-    { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://instagram.com/avrimile', color: 'bg-pink-600 hover:bg-pink-700' },
-    { name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: '#', color: 'bg-blue-800 hover:bg-blue-900' },
-    { name: 'WhatsApp', icon: 'fab fa-whatsapp', url: 'https://wa.me/2348130416289', color: 'bg-green-500 hover:bg-green-600' }
+    { 
+      name: 'Facebook', 
+      icon: Facebook, 
+      url: '#', 
+      color: 'bg-blue-600 hover:bg-blue-700',
+      animation: 'hover:animate-bounce-slow'
+    },
+    { 
+      name: 'Twitter', 
+      icon: Twitter, 
+      url: '#', 
+      color: 'bg-blue-400 hover:bg-blue-500',
+      animation: 'hover:animate-pulse-slow'
+    },
+    { 
+      name: 'Instagram', 
+      icon: Instagram, 
+      url: 'https://instagram.com/avrimile', 
+      color: 'bg-pink-600 hover:bg-pink-700',
+      animation: 'hover:animate-rotate-slow'
+    },
+    { 
+      name: 'LinkedIn', 
+      icon: Linkedin, 
+      url: '#', 
+      color: 'bg-blue-800 hover:bg-blue-900',
+      animation: 'hover:animate-pulse-slow'
+    },
+    { 
+      name: 'WhatsApp', 
+      icon: MessageCircle, 
+      url: 'https://wa.me/2348130416289', 
+      color: 'bg-green-500 hover:bg-green-600',
+      animation: 'hover:animate-bounce-slow'
+    }
   ];
 
   return (
@@ -126,16 +156,21 @@ const Contact = () => {
             <div className="pt-8">
               <h3 className="font-semibold text-avrimile-secondary mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200 ${social.color}`}
-                    data-testid={`social-${social.name.toLowerCase()}`}
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target={social.url.startsWith('http') ? '_blank' : '_self'}
+                      rel={social.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 ${social.color} ${social.animation}`}
+                      data-testid={`social-${social.name.toLowerCase()}`}
+                    >
+                      <IconComponent className="w-5 h-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -208,23 +243,25 @@ const Contact = () => {
                 />
               </div>
               
-              <Button
-                type="submit"
-                disabled={contactMutation.isPending}
-                className="w-fit bg-avrimile-primary hover:bg-avrimile-accent px-8 py-3"
-                data-testid="button-send-message"
-              >
-                {contactMutation.isPending ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
-              </Button>
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  disabled={contactMutation.isPending}
+                  className="w-fit bg-avrimile-primary hover:bg-avrimile-accent px-8 py-3"
+                  data-testid="button-send-message"
+                >
+                  {contactMutation.isPending ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message <Send className="ml-2 h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+              </div>
             </form>
           </div>
         </div>
