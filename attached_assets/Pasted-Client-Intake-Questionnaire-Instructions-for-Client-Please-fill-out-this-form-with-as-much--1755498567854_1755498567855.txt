@@ -1,0 +1,323 @@
+Client Intake Questionnaire
+**Instructions for Client:** 
+ Please fill out this form with as much detail as possible. Fields marked Optional can be skipped or revisited later.
+
+1. Business Overview
+Field
+Your Input
+Company Name: Avrimile Enterprises
+
+
+Tagline or Slogan (Optional): Beyond Every Mile
+
+
+Year Founded: 2022
+
+
+Brief Company Description (2–5 sentences): Avrimile offers logistics, procurement, and supply chain solutions, specializing in bulk goods sourcing, LTL, last-mile delivery, and inventory management to ensure seamless operations for MSMEs and individuals.
+
+
+Headquarters / Main Location: Greenfield Estate, Ago Palace Way Lagos.
+
+
+Areas / Countries Served: Nigeria
+
+
+Types of Logistics Services Offered (Tick all that apply): 
+
+
+☐ Freight / Cargo
+
+
+☐ Courier / Express Delivery ✅️
+
+
+☐ eCommerce Fulfillment ✅️
+
+
+☐ Last‑Mile Delivery ✅️
+
+
+☐ Trucking / Haulage ✅️
+
+
+☐ Cold‑chain Logistics
+
+
+☐ Warehousing ✅️
+
+
+☐ Fleet Management
+
+
+☐ Other
+
+
+
+
+2. Website Goals
+Field
+Your Input
+Primary Goal (Tick all that apply):
+
+
+☐ Lead generation ✅️
+
+
+☐ Showcase services ✅️
+
+
+☐ Customer portal/login ✅️
+
+
+☐ Real‑time delivery tracking ✅️
+
+
+☐ Online quote requests ✅️
+
+
+☐ Informational / company profile ✅️
+
+
+☐ Other
+
+
+Target Audience(s) (e.g., Retailers, Manufacturers, eCommerce, Individuals)
+MSMEs and Individuals 
+
+
+
+
+3. Design Preferences
+Field
+Your Input
+Preferred Color Scheme (Optional): Logo colours
+
+
+Style Direction:
+
+
+☐ Corporate & Professional ✅️
+
+
+☐ Clean & Minimal ✅️
+
+
+☐ Bold & Futuristic
+
+
+☐ Friendly & Accessible ✅️
+
+
+☐ Other
+
+
+Reference Websites You Like (Optional)
+
+
+
+Logo:
+
+
+☐ I will provide a high-resolution logo ✅️
+
+
+☐ I need help designing a logo
+
+
+
+
+4. Website Content Requirements
+Field
+Your Input
+Pages Needed (Tick all that apply):
+
+
+☐ Home ✅️
+
+
+☐ About Us ✅️
+
+
+☐ Our Services ✅️
+
+
+☐ Fleet / Equipment ✅️
+
+
+☐ Industries Served ✅️
+
+
+☐ Delivery Tracking ✅️
+
+
+☐ Testimonials ✅️
+
+
+☐ Contact Us ✅️
+
+
+☐ Get a Quote / Booking Form ✅️
+
+
+☐ Careers / Join Our Team
+
+
+☐ Blog or News ✅️
+
+
+☐ FAQs ✅️
+
+
+Do you already have written content?
+
+
+☐ Yes
+
+
+☐ No, I need help writing it ✅️
+
+
+List Your Services + Short Descriptions
+◇ Bulk Goods Sourcing and Delivery
+◇ Less Than Truck Load (LTL)    
+◇ Last Mile Delivery     
+◇ Inventory Management Solutions
+
+
+
+
+
+
+5. Media Assets
+Field
+Your Input
+Do you have images/videos of operations, fleet, team, warehouses?
+
+
+☐ Yes — will provide
+
+
+☐ No — need stock photos ✅️
+
+
+☐ Need photography help
+
+
+Do you have fleet/equipment images to showcase?
+
+
+☐ Yes
+
+
+☐ No ✅️
+
+
+
+
+6. Functionality Requirements
+Field
+Your Input
+Do you need the following features? (Tick all that apply):
+
+
+☐ Real-time delivery tracking ✅️
+
+
+☐ Booking or quote request form ✅️
+
+
+☐ Customer portal login ✅️
+
+
+☐ Google Maps integration ✅️
+
+
+☐ WhatsApp/chat integration ✅️
+
+
+☐ Newsletter signup ✅️
+
+
+☐ Testimonials slider ✅️
+
+
+☐ Blog/news system ✅️
+
+
+☐ Other
+
+
+
+
+
+7. Contact & Social Info
+Field
+Your Input
+Contact Phone Number: 08130416289
+
+
+Business Email Address: info.avrimile@gmail.com 
+
+
+WhatsApp Number (Optional): 08130416289
+
+
+Physical Address / HQ: Greenfield Estate, Ago Palace Way,  Lagos.
+
+
+Social Media Links:
+
+
+Facebook:
+
+
+Instagram: @avrimile
+
+
+LinkedIn:
+
+
+X (Twitter):
+
+
+Other:
+
+
+
+
+8. Optional Extra Info
+Field
+Your Input
+Certifications or Awards (Optional)
+
+
+Key Clients / Partners / Brands (Optional)
+
+
+Testimonials (Optional): Please provide 2–3 short quotes, with names and positions.
+
+
+Career Opportunities (Optional): Any open roles to display?
+
+
+
+
+9. Timeline & Budget
+Field
+Your Input
+Ideal Website Launch Date
+
+
+Fixed Budget?
+
+
+☐ Yes — ₦
+
+
+☐ No / Flexible ✅️
+
+
+
+
+
