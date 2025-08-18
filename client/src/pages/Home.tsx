@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import PackageTracker from "@/components/PackageTracker";
+// import PackageTracker from "@/components/PackageTracker";
 import About from "@/components/About";
 import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
@@ -15,7 +15,7 @@ const Home = () => {
       <Navigation />
       <Hero />
       <Services />
-      <PackageTracker />
+      {/*<PackageTracker />*/}
       <About />
       <Blog />
       <FAQ />

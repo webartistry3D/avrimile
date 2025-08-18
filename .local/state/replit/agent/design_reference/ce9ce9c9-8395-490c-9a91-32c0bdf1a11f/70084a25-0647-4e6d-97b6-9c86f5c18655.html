@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avrimile Enterprises - Beyond Every Mile | Logistics & Supply Chain Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22C55E',
+                        secondary: '#1E3A8A',
+                        accent: '#10B981',
+                        muted: '#64748B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-xl font-bold text-secondary">AVRIMILE</div>
+                            <div class="text-xs text-muted uppercase tracking-wide">Beyond Every Mile</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-secondary hover:text-primary font-medium transition-colors duration-200">Home</a>
+                        <a href="#about" class="text-muted hover:text-primary font-medium transition-colors duration-200">About Us</a>
+                        <a href="#services" class="text-muted hover:text-primary font-medium transition-colors duration-200">Our Services</a>
+                        <a href="#tracker" class="text-muted hover:text-primary font-medium transition-colors duration-200">Package Tracker</a>
+                        <a href="#blog" class="text-muted hover:text-primary font-medium transition-colors duration-200">Blog</a>
+                        <a href="#contact" class="text-muted hover:text-primary font-medium transition-colors duration-200">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button data-event="click:toggleMobileMenu" class="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <!-- @STATE: mobileMenuOpen:boolean = false -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-secondary hover:text-primary font-medium transition-colors duration-200">Home</a>
+                <a href="#about" class="block px-3 py-2 text-muted hover:text-primary font-medium transition-colors duration-200">About Us</a>
+                <a href="#services" class="block px-3 py-2 text-muted hover:text-primary font-medium transition-colors duration-200">Our Services</a>
+                <a href="#tracker" class="block px-3 py-2 text-muted hover:text-primary font-medium transition-colors duration-200">Package Tracker</a>
+                <a href="#blog" class="block px-3 py-2 text-muted hover:text-primary font-medium transition-colors duration-200">Blog</a>
+                <a href="#contact" class="block px-3 py-2 text-muted hover:text-primary font-medium transition-colors duration-200">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-secondary via-blue-800 to-blue-900 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="text-primary">AVRIMILE</span><br>
+                        <span class="text-3xl md:text-4xl lg:text-5xl">Beyond Every Mile</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+                        Reliable logistics, sourcing, and inventory management solutions for MSMEs and individuals across Nigeria.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button data-event="click:scrollToServices" class="bg-primary hover:bg-accent text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Learn More
+                        </button>
+                        <button data-event="click:openQuoteModal" class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                            Request a Quote
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Logistics truck image placeholder -->
+                    <!-- A modern white logistics truck on a highway with the Avrimile branding -->
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Avrimile logistics truck on highway" 
+                         class="rounded-xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Services</h2>
+                <p class="text-xl text-muted max-w-3xl mx-auto">Comprehensive logistics solutions designed to meet the evolving needs of businesses across Nigeria</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- @MAP: services.map(service => ( -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Last Mile Delivery</h3>
+                    <p class="text-muted leading-relaxed">Fast, reliable final-leg delivery solutions ensuring your packages reach customers efficiently across urban and rural areas.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Express Delivery</h3>
+                    <p class="text-muted leading-relaxed">Lightning-fast delivery service for urgent shipments with real-time tracking and priority handling.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Trucking & Bulk Haulage</h3>
+                    <p class="text-muted leading-relaxed">Heavy-duty transportation solutions for bulk goods and large-scale shipments across Nigeria.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-warehouse text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Warehousing</h3>
+                    <p class="text-muted leading-relaxed">Secure storage facilities with advanced inventory management systems and flexible storage solutions.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-boxes text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Inventory Management</h3>
+                    <p class="text-muted leading-relaxed">Smart inventory solutions with real-time tracking, automated reordering, and comprehensive reporting.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Procurement Services</h3>
+                    <p class="text-muted leading-relaxed">Strategic sourcing and procurement solutions to optimize your supply chain and reduce costs.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">e-Commerce Fulfillment</h3>
+                    <p class="text-muted leading-relaxed">End-to-end e-commerce solutions from order processing to final delivery for online businesses.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Real-Time Tracking</h3>
+                    <p class="text-muted leading-relaxed">Advanced GPS tracking system providing live updates on shipment location and delivery status.</p>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Package Tracker Section -->
+    <section id="tracker" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
+                    <i class="fas fa-search text-primary mr-3"></i>Track Your Package
+                </h2>
+                <p class="text-xl text-muted">Real-time tracking for all your deliveries across Nigeria</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex flex-col md:flex-row gap-4 mb-8">
+                        <input 
+                            type="text" 
+                            placeholder="Enter Tracking ID..." 
+                            class="flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none text-lg"
+                            data-bind="trackingId"
+                            data-mock="true"
+                        />
+                        <button 
+                            data-event="click:trackPackage"
+                            class="bg-primary hover:bg-accent text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+                        >
+                            <i class="fas fa-search mr-2"></i>Track
+                        </button>
+                    </div>
+
+                    <!-- @STATE: trackingResult:object = null, isLoading:boolean = false -->
+                    <div id="tracking-result" class="hidden">
+                        <!-- Mock tracking result display -->
+                        <div class="border-l-4 border-primary pl-6 space-y-6" data-mock="true">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Package Picked Up</h4>
+                                    <p class="text-muted text-sm">Lagos, Nigeria - Today 9:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                    <i class="fas fa-truck text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">In Transit</h4>
+                                    <p class="text-muted text-sm">En route to Abuja - Today 2:30 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-home text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-muted">Out for Delivery</h4>
+                                    <p class="text-muted text-sm">Expected today by 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-map text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Nationwide Coverage</h3>
+                            <p class="text-muted">Track packages anywhere in Nigeria in real time.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Delivery Transparency</h3>
+                            <p class="text-muted">Stay updated from pickup to drop-off.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Package Tracker Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- Nigerian business professionals in a modern office setting -->
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Avrimile team of logistics professionals" 
+                         class="rounded-xl shadow-lg w-full h-auto" />
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">About Us</h2>
+                    <div class="space-y-4 text-lg text-muted leading-relaxed">
+                        <p>
+                            At <span class="text-primary font-semibold">Avrimile Enterprises</span>, we go beyond every mile to provide innovative logistics and procurement solutions for individuals and businesses across Nigeria. Our services are designed to meet the evolving needs of micro, small, and medium-scale enterprises (MSMEs), delivering value through last-mile delivery, bulk haulage, inventory management, and tailored procurement support.
+                        </p>
+                        <p>
+                            With a growing fleet, real-time tracking capabilities, and a team of logistics professionals, we ensure every delivery is swift, secure, and seamless — from warehouse to doorstep. Our approach combines technology and expertise to optimize supply chains, reduce operational friction, and meet customer expectations with precision.
+                        </p>
+                        <p>
+                            Whether you're a startup scaling your distribution or a corporation optimizing your supply flows, Avrimile is your trusted partner for dependable, fast, and smart logistics. We don't just move goods — we deliver confidence, speed, and innovation in motion.
+                        </p>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                            <div class="text-muted">Deliveries Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                            <div class="text-muted">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Blog Section -->
+    <section id="blog" class="py-16 lg:py-24 bg-gradient-to-br from-primary to-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Insights & Stories</h2>
+                <p class="text-xl text-green-100 max-w-3xl mx-auto">Discover the latest trends, tips, and innovations shaping the logistics industry across Africa and beyond.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- @MAP: blogPosts.map(post => ( -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <!-- Delivery professional handing package to customer at doorstep -->
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                         alt="Last mile delivery service in action" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="text-sm text-muted mb-2">July 22, 2025</div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">How Last Mile Delivery is Changing Urban Logistics</h3>
+                        <p class="text-muted leading-relaxed mb-4">Discover how innovations in last mile delivery are redefining customer experience and reducing delivery times in major cities.</p>
+                        <button class="text-primary font-semibold hover:text-accent transition-colors duration-200">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <!-- Modern warehouse with automated systems and inventory -->
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                         alt="Modern warehouse operations and inventory management" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="text-sm text-muted mb-2">July 10, 2025</div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Top 5 eCommerce Fulfillment Strategies for 2025</h3>
+                        <p class="text-muted leading-relaxed mb-4">From smart warehousing to same-day shipping, explore strategies that help online brands delight customers and stay competitive.</p>
+                        <button class="text-primary font-semibold hover:text-accent transition-colors duration-200">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <!-- GPS tracking device and delivery route visualization -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                         alt="Real-time package tracking technology" 
+                         class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="text-sm text-muted mb-2">June 25, 2025</div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Why Real-Time Tracking Builds Customer Trust</h3>
+                        <p class="text-muted leading-relaxed mb-4">Real-time logistics visibility isn't just a feature— it's a necessity. Learn how tracking transforms your operations and reputation.</p>
+                        <button class="text-primary font-semibold hover:text-accent transition-colors duration-200">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Blog Section -->
+
+    <!-- @COMPONENT: FAQ Section -->
+    <section id="faqs" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-muted">Everything you need to know about Avrimile logistics and fulfillment services.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- @MAP: faqs.map((faq, index) => ( -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <button 
+                        data-event="click:toggleFAQ" 
+                        data-faq-index="0"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="font-semibold text-secondary">What areas do you deliver to?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4" data-faq-content="0">
+                        <p class="text-muted leading-relaxed">We provide logistics services across Nigeria, with a focus on major cities including Lagos, Abuja, Port Harcourt, Kano, and surrounding areas. Our network is continuously expanding to serve more locations.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <button 
+                        data-event="click:toggleFAQ" 
+                        data-faq-index="1"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="font-semibold text-secondary">How can I track my package in real-time?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4" data-faq-content="1">
+                        <p class="text-muted leading-relaxed">Use our package tracker above with your tracking ID to get real-time updates. You'll receive SMS notifications at key milestones, and our system provides live GPS tracking from pickup to delivery.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <button 
+                        data-event="click:toggleFAQ" 
+                        data-faq-index="2"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="font-semibold text-secondary">What is the average delivery time?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4" data-faq-content="2">
+                        <p class="text-muted leading-relaxed">Delivery times vary by service type and distance. Express delivery: Same day to 24 hours. Standard delivery: 1-3 business days within major cities, 3-7 days for remote areas. Bulk haulage: Scheduled based on requirements.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <button 
+                        data-event="click:toggleFAQ" 
+                        data-faq-index="3"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="font-semibold text-secondary">Do you offer warehousing and inventory support?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4" data-faq-content="3">
+                        <p class="text-muted leading-relaxed">Yes, we provide secure warehousing facilities with advanced inventory management systems. Our services include storage, stock monitoring, automated reordering alerts, and integration with your existing systems.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <button 
+                        data-event="click:toggleFAQ" 
+                        data-faq-index="4"
+                        class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                    >
+                        <span class="font-semibold text-secondary">Can I integrate your services with my online store?</span>
+                        <i class="fas fa-plus text-primary transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4" data-faq-content="4">
+                        <p class="text-muted leading-relaxed">Absolutely! We offer API integration for e-commerce platforms, enabling automated order processing, tracking updates, and seamless fulfillment. Our team can help set up custom integrations for your specific needs.</p>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FAQ Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Let's Connect</h2>
+                <p class="text-xl text-muted">Reach out for quotes, partnerships, or inquiries.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-secondary mb-1">Email</h3>
+                            <p class="text-muted">info.avrimile@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-secondary mb-1">Phone</h3>
+                            <p class="text-muted">+234 813 041 6289</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-secondary mb-1">Address</h3>
+                            <p class="text-muted">Greenfield Estate, Ago Palace Way, Lagos, Nigeria</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="pt-8">
+                        <h3 class="font-semibold text-secondary mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center text-white hover:bg-blue-500 transition-colors duration-200">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/avrimile" class="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center text-white hover:bg-pink-700 transition-colors duration-200">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center text-white hover:bg-blue-900 transition-colors duration-200">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/2348130416289" class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white hover:bg-green-600 transition-colors duration-200">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Get a Quote</h3>
+                    <form class="space-y-6" data-event="submit:handleQuoteForm">
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Full Name</label>
+                            <input type="text" data-bind="contactForm.name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:outline-none" data-mock="true" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Email Address</label>
+                            <input type="email" data-bind="contactForm.email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:outline-none" data-mock="true" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Phone Number</label>
+                            <input type="tel" data-bind="contactForm.phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:outline-none" data-mock="true" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Service Needed</label>
+                            <select data-bind="contactForm.service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:outline-none" data-mock="true">
+                                <option value="">Select a service</option>
+                                <option value="last-mile">Last Mile Delivery</option>
+                                <option value="express">Express Delivery</option>
+                                <option value="trucking">Trucking & Bulk Haulage</option>
+                                <option value="warehousing">Warehousing</option>
+                                <option value="inventory">Inventory Management</option>
+                                <option value="procurement">Procurement Services</option>
+                                <option value="ecommerce">e-Commerce Fulfillment</option>
+                                <option value="tracking">Real-Time Tracking</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Message</label>
+                            <textarea data-bind="contactForm.message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:outline-none resize-none" placeholder="Tell us about your logistics needs..." data-mock="true"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-accent text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-xl font-bold">AVRIMILE</div>
+                            <div class="text-xs text-blue-300 uppercase tracking-wide">Beyond Every Mile</div>
+                        </div>
+                    </div>
+                    <p class="text-blue-200 leading-relaxed mb-6">
+                        Delivering innovative logistics solutions across Nigeria with reliability, speed, and precision. Your trusted partner for all supply chain needs.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#services" class="hover:text-primary transition-colors duration-200">Last Mile Delivery</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors duration-200">Express Delivery</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors duration-200">Warehousing</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors duration-200">Real-Time Tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Company</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#about" class="hover:text-primary transition-colors duration-200">About Us</a></li>
+                        <li><a href="#blog" class="hover:text-primary transition-colors duration-200">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors duration-200">Contact</a></li>
+                        <li><a href="#faqs" class="hover:text-primary transition-colors duration-200">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 pt-8 text-center text-blue-300">
+                <p>&copy; 2025 Avrimile Enterprises. All rights reserved. | Beyond Every Mile</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: WhatsApp Float Button -->
+    <a href="https://wa.me/2348130416289" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 z-40">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <!-- @END_COMPONENT: WhatsApp Float Button -->
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+
+            // FAQ toggle functionality
+            const faqButtons = document.querySelectorAll('[data-event="click:toggleFAQ"]');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-faq-index');
+                    const content = document.querySelector(`[data-faq-content="${index}"]`);
+                    const icon = this.querySelector('i');
+                    
+                    if (content) {
+                        content.classList.toggle('hidden');
+                        if (content.classList.contains('hidden')) {
+                            icon.classList.remove('fa-minus');
+                            icon.classList.add('fa-plus');
+                        } else {
+                            icon.classList.remove('fa-plus');
+                            icon.classList.add('fa-minus');
+                        }
+                    }
+                });
+            });
+
+            // Package tracking functionality
+            const trackButton = document.querySelector('[data-event="click:trackPackage"]');
+            const trackingResult = document.getElementById('tracking-result');
+            
+            if (trackButton && trackingResult) {
+                trackButton.addEventListener('click', function() {
+                    const trackingInput = document.querySelector('input[data-bind="trackingId"]');
+                    if (trackingInput && trackingInput.value.trim()) {
+                        // Show loading state
+                        this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Tracking...';
+                        this.disabled = true;
+                        
+                        // Simulate API call
+                        setTimeout(() => {
+                            trackingResult.classList.remove('hidden');
+                            this.innerHTML = '<i class="fas fa-search mr-2"></i>Track';
+                            this.disabled = false;
+                            
+                            // Scroll to result
+                            trackingResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }, 1500);
+                    } else {
+                        alert('Please enter a tracking ID');
+                    }
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 64; // Account for fixed navbar
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            const icon = mobileMenuButton.querySelector('i');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            });
+
+            // Form submission handlers
+            const quoteForm = document.querySelector('[data-event="submit:handleQuoteForm"]');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form submission logic
+                    alert('Thank you for your inquiry! We will get back to you soon.');
+                });
+            }
+
+            // CTA button handlers
+            const learnMoreButton = document.querySelector('[data-event="click:scrollToServices"]');
+            if (learnMoreButton) {
+                learnMoreButton.addEventListener('click', function() {
+                    document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            const quoteButton = document.querySelector('[data-event="click:openQuoteModal"]');
+            if (quoteButton) {
+                quoteButton.addEventListener('click', function() {
+                    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    link.classList.add('text-muted');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.remove('text-muted');
+                        link.classList.add('text-primary');
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

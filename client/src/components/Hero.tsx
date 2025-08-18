@@ -16,19 +16,20 @@ const Hero = () => {
 
   const carouselImages = [
     {
-      src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      
+      src: "http://127.0.0.1:5000/src/assets/hero1.png",
       alt: "Avrimile logistics truck on highway"
     },
     {
-      src: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      src: "http://127.0.0.1:5000/src/assets/hero2.png",
       alt: "Modern warehouse facility"
     },
     {
-      src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      src: "http://127.0.0.1:5000/src/assets/hero5.jpg",
       alt: "Package delivery service"
     },
     {
-      src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      src: "http://127.0.0.1:5000/src/assets/about2.png",
       alt: "Supply chain management"
     }
   ];
@@ -86,7 +87,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-white">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-8xl font-black leading-tight mb-6">
               <span className="text-avrimile-primary">AVRIMILE</span><br />
               <span className="text-3xl md:text-4xl lg:text-5xl">Beyond Every Mile</span>
             </h1>

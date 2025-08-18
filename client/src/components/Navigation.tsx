@@ -66,12 +66,16 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="w-20 h-20 bg-gradient-to-br rounded-lg flex items-center justify-center">
+                <img 
+                  src="http://127.0.0.1:5000/src/assets/logo3.png"   // <-- replace with your actual path
+                  alt="Avrimile Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="ml-3">
-                <div className="text-xl font-bold text-avrimile-secondary">AVRIMILE</div>
-                <div className="text-xs text-avrimile-muted uppercase tracking-wide">Beyond Every Mile</div>
+                {/*<div className="text-xl font-bold text-avrimile-secondary">AVRIMILE</div>
+                <div className="text-xs text-avrimile-muted uppercase tracking-wide">Beyond Every Mile</div>*/}
               </div>
             </div>
           </div>

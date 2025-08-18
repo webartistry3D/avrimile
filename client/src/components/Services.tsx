@@ -7,7 +7,8 @@ const Services = () => {
 
   const services = [
     {
-      icon: <Truck className="text-2xl animate-bounce-slow" />,
+      icon: <MapPin className="w-8 h-8 animate-bounce-slow" />,
+      color: "from-blue-500 to-blue-700",
       title: "Last Mile Delivery",
       description: "Fast, reliable final-leg delivery solutions ensuring your packages reach customers efficiently across urban and rural areas.",
       details: {
@@ -28,7 +29,8 @@ const Services = () => {
       }
     },
     {
-      icon: <Zap className="text-2xl animate-pulse-slow" />,
+      icon: <Zap className="w-8 h-8 animate-pulse-slow" />,
+      color: "from-red-500 to-pink-600",
       title: "Express Delivery",
       description: "Lightning-fast delivery service for urgent shipments with real-time tracking and priority handling.",
       details: {
@@ -49,8 +51,8 @@ const Services = () => {
       }
     },
     {
-      icon: <Package className="text-2xl animate-rotate-slow" />,
-      title: "Trucking & Bulk Haulage",
+      icon: <Package className="w-8 h-8 animate-rotate-slow" />,
+      color: "from-green-500 to-emerald-700",
       description: "Heavy-duty transportation solutions for bulk goods and large-scale shipments across Nigeria.",
       details: {
         features: [
@@ -70,8 +72,8 @@ const Services = () => {
       }
     },
     {
-      icon: <Warehouse className="text-2xl animate-pulse-slow" />,
-      title: "Warehousing",
+      icon: <Warehouse className="w-8 h-8 animate-pulse-slow" />,
+      color: "from-purple-500 to-indigo-700",
       description: "Secure storage facilities with advanced inventory management systems and flexible storage solutions.",
       details: {
         features: [
@@ -91,8 +93,8 @@ const Services = () => {
       }
     },
     {
-      icon: <Box className="text-2xl animate-bounce-slow" />,
-      title: "Inventory Management",
+      icon: <Box className="w-8 h-8 animate-bounce-slow" />,
+      color: "from-yellow-400 to-orange-600",
       description: "Smart inventory solutions with real-time tracking, automated reordering, and comprehensive reporting.",
       details: {
         features: [
@@ -112,8 +114,8 @@ const Services = () => {
       }
     },
     {
-      icon: <ShoppingCart className="text-2xl animate-pulse-slow" />,
-      title: "Procurement Services",
+      icon: <ShoppingCart className="w-8 h-8 animate-pulse-slow" />,
+      color: "from-pink-400 to-rose-600",
       description: "Strategic sourcing and procurement solutions to optimize your supply chain and reduce costs.",
       details: {
         features: [
@@ -133,8 +135,8 @@ const Services = () => {
       }
     },
     {
-      icon: <Store className="text-2xl animate-rotate-slow" />,
-      title: "e-Commerce Fulfillment",
+      icon: <Store className="w-8 h-8 animate-rotate-slow" />,
+      color: "from-teal-400 to-cyan-600",
       description: "End-to-end e-commerce solutions from order processing to final delivery for online businesses.",
       details: {
         features: [
@@ -154,8 +156,8 @@ const Services = () => {
       }
     },
     {
-      icon: <MapPin className="text-2xl animate-bounce-slow" />,
-      title: "Real-Time Tracking",
+      icon: <MapPin className="w-8 h-8 animate-bounce-slow" />,
+      color: "from-gray-500 to-slate-700",
       description: "Advanced GPS tracking system providing live updates on shipment location and delivery status.",
       details: {
         features: [
@@ -183,7 +185,7 @@ const Services = () => {
       id="services" 
       className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")'
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://127.0.0.1:5000/src/assets/contact1.jpg")'
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -201,7 +203,8 @@ const Services = () => {
               className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105 hover:bg-white/20"
               data-testid={`service-${index}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-avrimile-primary to-avrimile-accent rounded-lg flex items-center justify-center mb-4 text-white shadow-lg">
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4 text-white shadow-lg`}>
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
