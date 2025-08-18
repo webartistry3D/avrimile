@@ -182,7 +182,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 border border-white/50">
+          <div className="bg-avrimile-secondary/95 backdrop-blur-sm rounded-xl p-8 border border-white/50">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">Get a Quote</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
@@ -192,7 +192,7 @@ const Contact = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateField('name', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
+                    className="border-white/50 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/30 w-full"
                     placeholder="Enter your full name"
                     data-testid="input-name"
                   />
@@ -204,7 +204,7 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateField('email', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
+                    className="border-white/50 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/30 w-full"
                     placeholder="your.email@example.com"
                     data-testid="input-email"
                   />
@@ -216,7 +216,7 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateField('phone', e.target.value)}
-                    className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full"
+                    className="border-white/50 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/30 w-full"
                     placeholder="+234 XXX XXX XXXX"
                     data-testid="input-phone"
                   />
@@ -225,8 +225,8 @@ const Contact = () => {
                 <div className="w-full max-w-md">
                   <label className="block text-sm font-medium text-white mb-2 text-center">Service Needed</label>
                   <Select value={formData.service} onValueChange={(value) => updateField('service', value)}>
-                    <SelectTrigger className="border-white/50 bg-white/30 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full" data-testid="select-service">
-                      <SelectValue placeholder="Select a service" className="text-gray-200" />
+                    <SelectTrigger className="border-white/50 bg-white/20 text-white focus:border-avrimile-primary focus:ring-avrimile-primary w-full" data-testid="select-service">
+                      <SelectValue placeholder="Select a service" className="text-gray-300" />
                     </SelectTrigger>
                     <SelectContent className="bg-white/95 backdrop-blur-md border-white/50">
                       <SelectItem value="last-mile">Last Mile Delivery</SelectItem>
@@ -248,7 +248,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => updateField('message', e.target.value)}
                   rows={4}
-                  className="border-white/50 bg-white/30 text-white placeholder:text-gray-200 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/40 w-full max-w-2xl resize-none"
+                  className="border-white/50 bg-white/20 text-white placeholder:text-gray-300 focus:border-avrimile-primary focus:ring-avrimile-primary focus:bg-white/30 w-full max-w-2xl resize-none"
                   placeholder="Tell us about your logistics needs..."
                   data-testid="textarea-message"
                 />

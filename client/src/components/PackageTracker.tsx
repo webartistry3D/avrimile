@@ -180,11 +180,11 @@ const PackageTracker = () => {
                       <div key={index} className="relative" data-testid={`tracking-event-${index}`}>
                         {/* Connecting line */}
                         {!isLast && (
-                          <div className="absolute left-4 top-12 w-0.5 h-16 bg-gradient-to-b from-avrimile-primary to-avrimile-accent"></div>
+                          <div className="absolute left-1/2 transform -translate-x-0.5 top-16 w-0.5 h-8 bg-gradient-to-b from-avrimile-primary to-avrimile-accent"></div>
                         )}
                         
-                        <div className="flex items-start space-x-4 pb-8">
-                          <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                        <div className="flex flex-col items-center pb-8">
+                          <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 mb-4 ${
                             isCompleted ? 'bg-avrimile-primary text-white shadow-lg' : 'bg-gray-300 text-white'
                           }`}>
                             {getStatusIcon(event.status)}
@@ -194,8 +194,8 @@ const PackageTracker = () => {
                             )}
                           </div>
                           
-                          <div className="flex-1 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-                            <h4 className="font-semibold text-avrimile-secondary text-lg">{formatStatus(event.status)}</h4>
+                          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 text-center max-w-sm">
+                            <h4 className="font-semibold text-avrimile-secondary text-lg mb-2">{formatStatus(event.status)}</h4>
                             <p className="text-avrimile-muted text-sm mb-1">{event.location}</p>
                             <p className="text-avrimile-primary text-sm font-medium mb-2">{formatDate(event.timestamp)}</p>
                             <p className="text-sm text-gray-600">{event.description}</p>
