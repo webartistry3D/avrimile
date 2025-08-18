@@ -61,7 +61,7 @@ app.use((req, res, next) => {
   const host = process.platform === "win32" ? "127.0.0.1" : "0.0.0.0";
 
   // ✅ Removed reusePort, not supported on Windows
-  server.listen(port, host, () => {
+  server.listen(port, "0.0.0.0", () => {
     log(`🚀 Serving on http://${host}:${port}`);
   });
 })();
