@@ -27,6 +27,12 @@ Preferred communication style: Simple, everyday language.
 - Package tracker section enhanced with animated background elements and glassy transparent styling
 - Contact section optimized with form field width constraints (max-w-md/max-w-2xl) and enhanced visual styling
 - Mobile-responsive improvements with background-attachment fallbacks for better performance
+- AVRIMILE logo in Hero section made significantly larger (text-9xl) with font-black weight
+- All text styling updated to use Montserrat font family for consistent branding
+- Service modals positioned in viewport center with glassy styling and click-to-close functionality
+- Package tracking timeline fully centralized with proper connecting lines
+- Contact form contrast improved with dark background for better readability
+- All elements properly centered across Package Tracker, Services, and Contact sections
 
 ## System Architecture
 

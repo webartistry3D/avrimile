@@ -86,7 +86,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight mb-6">
               <span className="text-avrimile-primary">AVRIMILE</span><br />
               <span className="text-3xl md:text-4xl lg:text-5xl">Beyond Every Mile</span>
             </h1>
