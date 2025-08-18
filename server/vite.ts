@@ -68,19 +68,19 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(import.meta.dirname, "../client/dist/public");
+  const distPath = path.resolve(import.meta.dirname, "../client/dist");
 
   if (!fs.existsSync(distPath)) {
-    throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`
-    );
+    throw new Error(`Could not find the build directory: ${distPath}`);
   }
 
+  // 1️⃣ Serve all static files (JS, CSS, images, etc.)
   app.use(express.static(distPath));
 
-  // fallback to index.html for SPA
-  app.use("*", (_req, res) => {
+  // 2️⃣ SPA fallback: only for unmatched routes (not static assets)
+  app.get("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
+
 
