@@ -1,13 +1,19 @@
 const About = () => {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="about" 
+      className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")'
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
               alt="Avrimile team of logistics professionals"
-              className="rounded-xl shadow-lg w-full h-auto"
+              className="rounded-xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-300"
               data-testid="img-about-team"
             />
           </div>

@@ -17,6 +17,12 @@ Preferred communication style: Simple, everyday language.
 - Package tracker should show connecting trails between tracking points
 - Animated navigation menu tray open/close actions
 - Smooth section animations during navigation
+- Added engaging typing animation to Hero section with dynamic text rotation
+- Implemented image carousel in Hero section with auto-advance and navigation controls
+- Added parallax background images to Services, About, and Contact sections for dynamic visual effect
+- Mobile navigation tray now width-fits content and positioned compactly
+- All form buttons properly centered for better visual balance
+- Replaced static social media buttons with animated Lucide React icons
 
 ## System Architecture
 

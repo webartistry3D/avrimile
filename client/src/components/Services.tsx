@@ -179,11 +179,17 @@ const Services = () => {
   const closeModal = () => setSelectedService(null);
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="services" 
+      className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")'
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-avrimile-secondary mb-4">Our Services</h2>
-          <p className="text-xl text-avrimile-muted max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Comprehensive logistics solutions designed to meet the evolving needs of businesses across Nigeria
           </p>
         </div>

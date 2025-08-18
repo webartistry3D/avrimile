@@ -112,11 +112,17 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="contact" 
+      className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")'
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-avrimile-secondary mb-4">Let's Connect</h2>
-          <p className="text-xl text-avrimile-muted">Reach out for quotes, partnerships, or inquiries.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Connect</h2>
+          <p className="text-xl text-gray-200">Reach out for quotes, partnerships, or inquiries.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -127,8 +133,8 @@ const Contact = () => {
                 <Mail className="text-white text-lg" />
               </div>
               <div>
-                <h3 className="font-semibold text-avrimile-secondary mb-1">Email</h3>
-                <p className="text-avrimile-muted">info@avrimile.ng</p>
+                <h3 className="font-semibold text-white mb-1">Email</h3>
+                <p className="text-gray-200">info@avrimile.ng</p>
               </div>
             </div>
 
@@ -137,8 +143,8 @@ const Contact = () => {
                 <Phone className="text-white text-lg" />
               </div>
               <div>
-                <h3 className="font-semibold text-avrimile-secondary mb-1">Phone</h3>
-                <p className="text-avrimile-muted">+234 700 800 9000</p>
+                <h3 className="font-semibold text-white mb-1">Phone</h3>
+                <p className="text-gray-200">+234 700 800 9000</p>
               </div>
             </div>
 
@@ -147,14 +153,14 @@ const Contact = () => {
                 <MapPin className="text-white text-lg" />
               </div>
               <div>
-                <h3 className="font-semibold text-avrimile-secondary mb-1">Address</h3>
-                <p className="text-avrimile-muted">Lagos, Nigeria</p>
+                <h3 className="font-semibold text-white mb-1">Address</h3>
+                <p className="text-gray-200">Lagos, Nigeria</p>
               </div>
             </div>
 
             {/* Social Media Links */}
             <div className="pt-8">
-              <h3 className="font-semibold text-avrimile-secondary mb-4">Follow Us</h3>
+              <h3 className="font-semibold text-white mb-4">Follow Us</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;

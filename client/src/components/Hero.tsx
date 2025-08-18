@@ -1,6 +1,72 @@
-import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Hero = () => {
+  const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const typingTexts = [
+    "Reliable logistics solutions",
+    "Fast delivery across Nigeria", 
+    "Professional supply chain management",
+    "Your trusted logistics partner"
+  ];
+
+  const carouselImages = [
+    {
+      src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      alt: "Avrimile logistics truck on highway"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      alt: "Modern warehouse facility"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      alt: "Package delivery service"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      alt: "Supply chain management"
+    }
+  ];
+  
+  useEffect(() => {
+    const currentText = typingTexts[currentWordIndex];
+    
+    if (currentIndex < currentText.length) {
+      const timeout = setTimeout(() => {
+        setTypedText(currentText.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setCurrentIndex(0);
+        setTypedText("");
+        setCurrentWordIndex((prev) => (prev + 1) % typingTexts.length);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, currentWordIndex, typingTexts]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
+
   const scrollToServices = () => {
     const section = document.getElementById('services');
     if (section) {
@@ -24,8 +90,14 @@ const Hero = () => {
               <span className="text-avrimile-primary">AVRIMILE</span><br />
               <span className="text-3xl md:text-4xl lg:text-5xl">Beyond Every Mile</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-              Reliable logistics, sourcing, and inventory management solutions for MSMEs and individuals across Nigeria.
+            <div className="mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-100 min-h-[3rem] flex items-center">
+                {typedText}
+                <span className="animate-pulse text-avrimile-primary ml-1">|</span>
+              </h2>
+            </div>
+            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+              Comprehensive logistics, sourcing, and inventory management solutions for MSMEs and individuals across Nigeria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
@@ -45,13 +117,55 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-              alt="Avrimile logistics truck on highway"
-              className="rounded-xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
-              data-testid="img-hero-truck"
-            />
+          <div className="relative group">
+            <div className="relative overflow-hidden rounded-xl shadow-2xl">
+              {carouselImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`w-full h-[400px] object-cover transition-all duration-500 transform ${
+                    index === currentImageIndex
+                      ? 'opacity-100 scale-100'
+                      : 'opacity-0 scale-105 absolute inset-0'
+                  }`}
+                  data-testid={`img-hero-${index}`}
+                />
+              ))}
+              
+              {/* Navigation buttons */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                data-testid="carousel-prev"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+                data-testid="carousel-next"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+              
+              {/* Dots indicator */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex
+                        ? 'bg-avrimile-primary'
+                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                    }`}
+                    data-testid={`carousel-dot-${index}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
