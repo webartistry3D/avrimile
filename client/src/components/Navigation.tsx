@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.png"; // Vite resolves the alias
+import logo from "../images/logo.png"; // Vite resolves the alias
 
 
 const Navigation = () => {

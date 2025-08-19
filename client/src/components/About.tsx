@@ -11,7 +11,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="http://127.0.0.1:5000/src/assets/about1.jpg"
+              src="../images/logo.png"
               alt="Avrimile team of logistics professionals"
               className="rounded-xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-300"
               data-testid="img-about-team"
