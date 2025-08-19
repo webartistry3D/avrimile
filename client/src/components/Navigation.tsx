@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png"; // Vite resolves the alias
+
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -68,7 +70,7 @@ const Navigation = () => {
             <div className="flex-shrink-0 flex items-center">
               <div className="w-20 h-20 bg-gradient-to-br rounded-lg flex items-center justify-center">
                 <img 
-                  src="http://127.0.0.1:5000/src/assets/logo3.png"   // <-- replace with your actual path
+                  src={logo}   // <-- replace with your actual path
                   alt="Avrimile Logo" 
                   className="w-full h-full object-contain"
                 />
