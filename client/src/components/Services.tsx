@@ -54,6 +54,7 @@ const Services = () => {
     {
       icon: <Package className="w-8 h-8 animate-rotate-slow" />,
       color: "from-green-500 to-emerald-700",
+      title: "Haulage",
       description: "Heavy-duty transportation solutions for bulk goods and large-scale shipments across Nigeria.",
       details: {
         features: [
@@ -75,6 +76,7 @@ const Services = () => {
     {
       icon: <Warehouse className="w-8 h-8 animate-pulse-slow" />,
       color: "from-purple-500 to-indigo-700",
+      title: "Warehousing",
       description: "Secure storage facilities with advanced inventory management systems and flexible storage solutions.",
       details: {
         features: [
@@ -96,6 +98,7 @@ const Services = () => {
     {
       icon: <Box className="w-8 h-8 animate-bounce-slow" />,
       color: "from-yellow-400 to-orange-600",
+      title: "Inventory Management",
       description: "Smart inventory solutions with real-time tracking, automated reordering, and comprehensive reporting.",
       details: {
         features: [
@@ -117,6 +120,7 @@ const Services = () => {
     {
       icon: <ShoppingCart className="w-8 h-8 animate-pulse-slow" />,
       color: "from-pink-400 to-rose-600",
+      title: "Procurement",
       description: "Strategic sourcing and procurement solutions to optimize your supply chain and reduce costs.",
       details: {
         features: [
@@ -138,6 +142,7 @@ const Services = () => {
     {
       icon: <Store className="w-8 h-8 animate-rotate-slow" />,
       color: "from-teal-400 to-cyan-600",
+      title: "E-Commerce",
       description: "End-to-end e-commerce solutions from order processing to final delivery for online businesses.",
       details: {
         features: [
@@ -156,9 +161,10 @@ const Services = () => {
         pricing: "Starting from ₦800 per order + storage"
       }
     },
-    {
+    /*{
       icon: <MapPin className="w-8 h-8 animate-bounce-slow" />,
       color: "from-gray-500 to-slate-700",
+      title: "Real-Time Tracking",
       description: "Advanced GPS tracking system providing live updates on shipment location and delivery status.",
       details: {
         features: [
@@ -176,7 +182,7 @@ const Services = () => {
         ],
         pricing: "Included with all delivery services"
       }
-    }
+    }*/
   ];
 
   const closeModal = () => setSelectedService(null);
