@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
+
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -14,18 +19,17 @@ const Hero = () => {
     "Your trusted logistics partner\nfor seamless operations",
   ];
 
-  // ✅ Images directly from public/images/
   const carouselImages = [
-    { src: "../images/hero1.png", alt: "Avrimile logistics truck on highway" },
-    { src: "../images/hero2.png", alt: "Modern warehouse facility" },
-    { src: "../images/hero3.png", alt: "Package delivery service" },
-    { src: "../images/hero4.png", alt: "Supply chain management" },
+    { src: hero1, alt: "Truck" },
+    { src: hero2, alt: "Warehouse" },
+    { src: hero3, alt: "Delivery" },
+    { src: hero4, alt: "Supply chain" },
   ];
+
 
   // Typing effect
   useEffect(() => {
     const currentText = typingTexts[currentWordIndex];
-
     if (currentIndex < currentText.length) {
       const timeout = setTimeout(() => {
         setTypedText(currentText.slice(0, currentIndex + 1));
@@ -87,9 +91,7 @@ const Hero = () => {
             <div className="mb-4">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">
                 {typedText}
-                <span className="animate-pulse text-avrimile-primary ml-1">
-                  |
-                </span>
+                <span className="animate-pulse text-avrimile-primary ml-1">|</span>
               </h2>
             </div>
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">

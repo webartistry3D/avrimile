@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Truck, Zap, Package, Warehouse, Box, ShoppingCart, Store, MapPin, X, Clock, Shield, Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import servicesBg from "../assets/services-bg.png";
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -185,8 +186,9 @@ const Services = () => {
       id="services" 
       className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://127.0.0.1:5000/src/assets/contact1.jpg")'
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${servicesBg})`
       }}
+
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

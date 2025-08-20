@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../images/logo.png"; // Vite resolves the alias
+import logo from "../assets/logo.png"; // Vite resolves the alias
 
 
 const Navigation = () => {
@@ -55,7 +55,7 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'services', label: 'Our Services' },
-    { id: 'tracker', label: 'Package Tracker' },
+    //{ id: 'tracker', label: 'Package Tracker' },
     { id: 'about', label: 'About Us' },
     { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact Us' }
@@ -74,6 +74,7 @@ const Navigation = () => {
                   alt="Avrimile Logo" 
                   className="w-full h-full object-contain"
                 />
+                {/*<img src="/images/logo.png" alt="Avrimile Logo" />*/}
               </div>
               <div className="ml-3">
                 {/*<div className="text-xl font-bold text-avrimile-secondary">AVRIMILE</div>

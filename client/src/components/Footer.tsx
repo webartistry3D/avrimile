@@ -40,18 +40,18 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('tracker')} 
-                  className="hover:text-avrimile-primary transition-colors text-left"
-                >
-                  Track Package
-                </button>
-              </li>
-              <li>
-                <button 
                   onClick={() => scrollToSection('about')} 
                   className="hover:text-avrimile-primary transition-colors text-left"
                 >
                   About
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('blog')} 
+                  className="hover:text-avrimile-primary transition-colors text-left"
+                >
+                  Blog
                 </button>
               </li>
               <li>

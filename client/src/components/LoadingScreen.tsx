@@ -42,6 +42,7 @@ export default function LoadingScreen({ visible }: Props) {
               loading="eager"
               decoding="async"
             />
+            {/*<img src="/images/logo.png" alt="Avrimile logo" />*/}
           </div>
 
           <h1 className="text-white text-3xl font-extrabold tracking-tight">AVRIMILE</h1>

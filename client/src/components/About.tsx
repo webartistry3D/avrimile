@@ -1,21 +1,28 @@
+import aboutBg from "../assets/about-bg.png";
+import aboutVideo from "../assets/about.mp4";
+
 const About = () => {
   return (
     <section 
       id="about" 
       className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("http://127.0.0.1:5000/src/assets/about1.jpg")'
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(${aboutBg})`
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img
-              src="../images/logo.png"
-              alt="Avrimile team of logistics professionals"
+            <video
+              src={aboutVideo}
               className="rounded-xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-300"
-              data-testid="img-about-team"
-            />
+              autoPlay
+              muted
+              loop
+              playsInline
+              data-testid="video-about-team"
+            >
+            </video>
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-avrimile-secondary mb-6">About Us</h2>
