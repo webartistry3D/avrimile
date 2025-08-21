@@ -4,6 +4,10 @@ import hero1 from "../assets/hero1.png";
 import hero2 from "../assets/hero2.png";
 import hero3 from "../assets/hero3.png";
 import hero4 from "../assets/hero4.png";
+import hero5 from "../assets/hero5.png";
+import hero6 from "../assets/hero6.png";
+import hero7 from "../assets/hero7.png";
+import hero8 from "../assets/hero8.png";
 
 
 const Hero = () => {
@@ -24,6 +28,10 @@ const Hero = () => {
     { src: hero2, alt: "Warehouse" },
     { src: hero3, alt: "Delivery" },
     { src: hero4, alt: "Supply chain" },
+    { src: hero5, alt: "Logistics" },
+    { src: hero6, alt: "Movement" },
+    { src: hero7, alt: "Haulage" },
+    { src: hero8, alt: "Satisfaction" },
   ];
 
 
