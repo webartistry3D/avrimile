@@ -91,7 +91,7 @@ const Hero = () => {
             <div className="mb-4">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">
                 {typedText}
-                <span className="animate-pulse text-avrimile-primary ml-1">|</span>
+                {/*<span className="animate-pulse text-avrimile-primary ml-1">|</span>*/}
               </h2>
             </div>
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
