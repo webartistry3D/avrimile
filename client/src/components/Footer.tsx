@@ -70,13 +70,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-center">
-                <span className="mr-2">📧</span> info@avrimile.ng
+                <span className="mr-2">📧</span> info.avrimile@gmail.com
               </p>
               <p className="flex items-center">
-                <span className="mr-2">📞</span> +234 700 800 9000
+                <span className="mr-2">📞</span> +234 813 041 6289
               </p>
               <p className="flex items-center">
-                <span className="mr-2">📍</span> Lagos, Nigeria
+                <span className="mr-2">📍</span> Greenfield Estate, Ago Palace Way, Lagos, Nigeria
               </p>
             </div>
           </div>

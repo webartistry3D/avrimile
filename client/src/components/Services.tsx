@@ -98,7 +98,7 @@ const Services = () => {
       }
     },
     {
-      icon: <Box className="w-8 h-8 animate-bounce-slow" />,
+      icon: <Box className="w-8 h-8 animate-rotate-slow" />,
       color: "from-yellow-400 to-orange-600",
       title: "Inventory Management",
       description: "Smart inventory solutions with real-time tracking, automated reordering, and comprehensive reporting.",
@@ -120,7 +120,7 @@ const Services = () => {
       }
     },
     {
-      icon: <ShoppingCart className="w-8 h-8 animate-pulse-slow" />,
+      icon: <ShoppingCart className="w-8 h-8 animate-bounce-slow" />,
       color: "from-pink-400 to-rose-600",
       title: "Procurement",
       description: "Strategic sourcing and procurement solutions to optimize your supply chain and reduce costs.",
@@ -142,7 +142,7 @@ const Services = () => {
       }
     },
     {
-      icon: <Store className="w-8 h-8 animate-rotate-slow" />,
+      icon: <Store className="w-8 h-8 animate-pulse-slow" />,
       color: "from-teal-400 to-cyan-600",
       title: "E-Commerce",
       description: "End-to-end e-commerce solutions from order processing to final delivery for online businesses.",

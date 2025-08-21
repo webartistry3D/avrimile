@@ -13,22 +13,22 @@ const FAQ = () => {
       question: "What areas do you deliver to?",
       answer: "We provide logistics services across Nigeria, with a focus on major cities including Lagos, Abuja, Port Harcourt, Kano, and surrounding areas. Our network is continuously expanding to serve more locations."
     },
-    {
+    /*{
       question: "How can I track my package in real-time?",
       answer: "Use our package tracker above with your tracking ID to get real-time updates. You'll receive SMS notifications at key milestones, and our system provides live GPS tracking from pickup to delivery."
-    },
+    },*/
     {
       question: "What is the average delivery time?",
-      answer: "Delivery times vary by service type and distance. Express delivery: Same day to 24 hours. Standard delivery: 1-3 business days within major cities, 3-7 days for remote areas. Bulk haulage: Scheduled based on requirements."
+      answer: "Delivery times vary by service type and distance. Express delivery: Within 24 hours. Standard delivery: 1-3 business days within major cities, 3-7 days for remote areas. Bulk haulage: Scheduled based on requirements."
     },
     {
       question: "Do you offer warehousing and inventory support?",
       answer: "Yes, we provide secure warehousing facilities with advanced inventory management systems. Our services include storage, stock monitoring, automated reordering alerts, and integration with your existing systems."
     },
-    {
+    /*{
       question: "Can I integrate your services with my online store?",
       answer: "Absolutely! We offer API integration for e-commerce platforms, enabling automated order processing, tracking updates, and seamless fulfillment. Our team can help set up custom integrations for your specific needs."
-    }
+    }*/
   ];
 
   return (

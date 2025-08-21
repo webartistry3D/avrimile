@@ -135,7 +135,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Email</h3>
-                <p className="text-gray-200">info@avrimile.ng</p>
+                <p className="text-gray-200">info.avrimile@gmail.com</p>
               </div>
             </div>
 
@@ -145,7 +145,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Phone</h3>
-                <p className="text-gray-200">+234 700 800 9000</p>
+                <p className="text-gray-200">+234 813 041 6289</p>
               </div>
             </div>
 
@@ -155,7 +155,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">Address</h3>
-                <p className="text-gray-200">Lagos, Nigeria</p>
+                <p className="text-gray-200">Greenfield Estate, Ago Palace Way, Lagos, Nigeria</p>
               </div>
             </div>
 
