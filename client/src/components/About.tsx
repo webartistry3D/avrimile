@@ -46,7 +46,7 @@ const About = () => {
                 goods — we deliver confidence, speed, and innovation in motion.
               </p>
             </div>
-            <div className="mt-8 grid grid-cols-2 gap-6">
+            {/*<div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center" data-testid="stat-deliveries">
                 <div className="text-6xl font-bold text-avrimile-primary mb-2">500+</div>
                 <div className="text-avrimile-muted">Deliveries Completed</div>
@@ -55,7 +55,7 @@ const About = () => {
                 <div className="text-6xl font-bold text-avrimile-primary mb-2">50+</div>
                 <div className="text-avrimile-muted">Happy Clients</div>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
