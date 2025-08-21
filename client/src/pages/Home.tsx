@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 // import PackageTracker from "@/components/PackageTracker";
 import About from "@/components/About";
+import Trust from "@/components/Trust";
 import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
       {/*<PackageTracker />*/}
       <About />
+      <Trust />
       <Blog />
       <FAQ />
       <Contact />

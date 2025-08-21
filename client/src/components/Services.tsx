@@ -194,7 +194,7 @@ const Services = () => {
       id="services" 
       className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${servicesBg})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${servicesBg})`
       }}
 
     >
