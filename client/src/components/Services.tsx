@@ -14,7 +14,7 @@ const Services = () => {
       description: "Fast, reliable final-leg delivery solutions ensuring your packages reach customers efficiently across urban and rural areas.",
       details: {
         features: [
-          "Same-day delivery in major cities",
+          "Same-day delivery in within Lagos",
           "Door-to-door service",
           "SMS and email notifications",
           "Proof of delivery with photos",
