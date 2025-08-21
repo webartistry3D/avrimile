@@ -23,32 +23,33 @@ const Services = () => {
         benefits: [
           "99.5% delivery success rate",
           "Average delivery time: 2-4 hours",
-          "Coverage in 20+ states across Nigeria",
+          //"Coverage in 20+ states across Nigeria",
           "24/7 customer support"
         ],
-        pricing: "Starting from ₦1,500 per delivery within Lagos"
+        pricing: "Starting from ₦3,000 per delivery within Lagos"
       }
     },
     {
       icon: <Zap className="w-8 h-8 animate-pulse-slow" />,
       color: "from-red-500 to-pink-600",
       title: "Express Delivery",
-      description: "Lightning-fast delivery service for urgent shipments with real-time tracking and priority handling.",
+      //description: "Lightning-fast delivery service for urgent shipments with real-time tracking and priority handling.",
+      description: "Lightning-fast delivery service for urgent shipments with priority handling.",
       details: {
         features: [
-          "1-hour pickup guarantee",
+          //"1-hour pickup guarantee",
           "Priority routing system",
-          "Real-time GPS tracking",
+          //"Real-time GPS tracking",
           "Temperature-controlled options",
           "Fragile item handling"
         ],
         benefits: [
           "Fastest delivery network in Nigeria",
           "99.8% on-time delivery rate",
-          "Insurance coverage up to ₦500,000",
+          //"Insurance coverage up to ₦500,000",
           "Dedicated customer manager"
         ],
-        pricing: "Starting from ₦2,500 for express service"
+        pricing: "Starting from ₦6,000 for express service"
       }
     },
     {
@@ -58,7 +59,8 @@ const Services = () => {
       description: "Heavy-duty transportation solutions for bulk goods and large-scale shipments across Nigeria.",
       details: {
         features: [
-          "Fleet of 50+ trucks",
+          //"Fleet of 50+ trucks",
+          "Fleet of trucks",
           "Dry and refrigerated options",
           "Cross-country transport",
           "Load optimization",
@@ -87,12 +89,12 @@ const Services = () => {
           "Cross-docking capabilities"
         ],
         benefits: [
-          "5 warehouse locations",
-          "50,000+ sq ft total space",
+          //"5 warehouse locations",
+          "10,000+ sq ft total space",
           "99.9% inventory accuracy",
           "Flexible storage terms"
         ],
-        pricing: "Starting from ₦50 per sq ft per month"
+        pricing: "Starting from ₦20,000 per sq ft per month"
       }
     },
     {
@@ -111,8 +113,8 @@ const Services = () => {
         benefits: [
           "Reduce stock-outs by 85%",
           "Lower inventory costs by 30%",
-          "Real-time reporting dashboard",
-          "Integration with major platforms"
+          //"Real-time reporting dashboard",
+          //"Integration with major platforms"
         ],
         pricing: "Starting from ₦25,000 per month"
       }
@@ -136,7 +138,7 @@ const Services = () => {
           "Quality guarantee",
           "Streamlined ordering process"
         ],
-        pricing: "Commission-based: 3-7% of order value"
+        pricing: "Commission-based: 5-10% of order value"
       }
     },
     {
@@ -146,7 +148,7 @@ const Services = () => {
       description: "End-to-end e-commerce solutions from order processing to final delivery for online businesses.",
       details: {
         features: [
-          "Order processing automation",
+          //"Order processing automation",
           "Multi-channel integration",
           "Returns management",
           "Gift wrapping services",
@@ -158,7 +160,7 @@ const Services = () => {
           "Integration with Shopify, WooCommerce",
           "Scalable solutions"
         ],
-        pricing: "Starting from ₦800 per order + storage"
+        pricing: "Starting from ₦3000 per order + storage"
       }
     },
     /*{
