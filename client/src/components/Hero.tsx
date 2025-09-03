@@ -17,11 +17,12 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const typingTexts = [
-    "Reliable logistics solutions\nfor modern businesses",
-    "Fast delivery across Nigeria\nwith real-time tracking",
+    "Reliable logistics solutions for\nmodern businesses",
+    //"Fast delivery across Nigeria\nwith real-time tracking",
     "Professional supply chain\nmanagement services",
-    "Your trusted logistics partner\nfor seamless operations",
-  ];
+    "Your trusted logistics partner for\nseamless operations",
+    "Comprehensive logistics, sourcing,\nand inventory management\nsolutions for MSMEs and individuals",
+    ];
 
   const carouselImages = [
     { src: hero1, alt: "Truck" },
@@ -42,7 +43,7 @@ const Hero = () => {
       const timeout = setTimeout(() => {
         setTypedText(currentText.slice(0, currentIndex + 1));
         setCurrentIndex((prev) => prev + 1);
-      }, 100);
+      }, 50);
       return () => clearTimeout(timeout);
     } else {
       const timeout = setTimeout(() => {
@@ -97,15 +98,15 @@ const Hero = () => {
               </span>*/}
             </h1>
             <div className="mb-4">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-regular text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">
                 {typedText}
                 {/*<span className="animate-pulse text-avrimile-primary ml-1">|</span>*/}
               </h2>
             </div>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+            {/*<p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
               Comprehensive logistics, sourcing, and inventory management
               solutions for MSMEs and individuals across Nigeria.
-            </p>
+            </p>*/}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={scrollToServices}
