@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
-import { FaXTwitter} from react-icons/fa6;
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import contactBg from "../assets/about-bg.png";
 
 const Contact = () => {
@@ -13,8 +12,8 @@ const Contact = () => {
       animation: 'hover:animate-bounce-slow'
     },
     { 
-      name: 'X', 
-      icon: FaXTwitter, 
+      name: 'Twitter', 
+      icon: Twitter, 
       url: '#', 
       color: 'bg-blue-400 hover:bg-blue-500',
       animation: 'hover:animate-pulse-slow'
