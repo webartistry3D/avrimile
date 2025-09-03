@@ -92,9 +92,9 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-8xl font-black leading-tight mb-6">
               <span className="text-avrimile-primary">AVRIMILE</span>
               <br />
-              <span className="text-3xl md:text-4xl lg:text-5xl">
+              {/*<span className="text-3xl md:text-4xl lg:text-5xl">
                 Beyond Every Mile
-              </span>
+              </span>*/}
             </h1>
             <div className="mb-4">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-100 min-h-[5rem] md:min-h-[6rem] flex items-center whitespace-pre-line leading-relaxed">

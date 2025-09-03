@@ -1,4 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import blogImg1 from "../assets/Blogpost1.jpg";
+import blogImg2 from "../assets/Blogpost2b.jpg";
+import blogImg3 from "../assets/Blogpost3.jpg";
 
 const Blog = () => {
   const blogPosts = [
@@ -6,19 +9,19 @@ const Blog = () => {
       date: "July 22, 2025",
       title: "How Last Mile Delivery is Changing Urban Logistics",
       description: "Discover how innovations in last mile delivery are redefining customer experience and reducing delivery times in major cities.",
-      image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      image: blogImg1,
     },
     {
       date: "July 10, 2025",
       title: "Top 5 eCommerce Fulfillment Strategies for 2025",
       description: "From smart warehousing to same-day shipping, explore strategies that help online brands delight customers and stay competitive.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      image: blogImg2,
     },
     {
       date: "June 25, 2025",
       title: "Why Real-Time Tracking Builds Customer Trust",
       description: "Real-time logistics visibility isn't just a feature— it's a necessity. Learn how tracking transforms your operations and reputation.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      image: blogImg3,
     }
   ];
 

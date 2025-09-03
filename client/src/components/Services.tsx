@@ -14,7 +14,7 @@ const Services = () => {
       description: "Fast, reliable final-leg delivery solutions ensuring your packages reach customers efficiently across urban and rural areas.",
       details: {
         features: [
-          "Same-day delivery in within Lagos",
+          "Same-day delivery within Lagos",
           "Door-to-door service",
           "SMS and email notifications",
           "Proof of delivery with photos",
@@ -22,7 +22,7 @@ const Services = () => {
         ],
         benefits: [
           "99.5% delivery success rate",
-          "Average delivery time: 2-4 hours",
+          //"Average delivery time: 2-4 hours",
           //"Coverage in 20+ states across Nigeria",
           "24/7 customer support"
         ],
@@ -202,7 +202,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Comprehensive logistics solutions designed to meet the evolving needs of businesses across Nigeria
+            Comprehensive logistics solutions designed to meet the evolving needs of businesses across Nigeria.
           </p>
         </div>
 
@@ -218,7 +218,7 @@ const Services = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-200 leading-relaxed mb-4">{service.description}</p>
+              /*<p className="text-gray-200 leading-relaxed mb-4">{service.description}</p>
               <div className="flex justify-end">
                 <Button
                   onClick={() => setSelectedService(index)}
