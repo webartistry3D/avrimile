@@ -94,7 +94,7 @@ const Trust = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-5xl font-bold text-avrimile-primary mb-2">
-              <Counter target={10} duration={2000} inView={inView} />+
+              <Counter target={10} duration={9000} inView={inView} />+
             </div>
             <div className="text-avrimile-primary font-semibold">Years of Experience</div>
           </div>
@@ -106,13 +106,13 @@ const Trust = () => {
           </div>
           <div className="text-center">
             <div className="text-5xl font-bold text-avrimile-primary mb-2">
-              <Counter target={98} duration={2200} inView={inView} />%
+              <Counter target={98} duration={7000} inView={inView} />%
             </div>
             <div className="text-avrimile-primary font-semibold">Client Satisfaction</div>
           </div>
           <div className="text-center">
             <div className="text-5xl font-bold text-avrimile-primary mb-2">
-              <Counter target={20} duration={1800} inView={inView} />+
+              <Counter target={20} duration={8000} inView={inView} />+
             </div>
             <div className="text-avrimile-primary font-semibold">Partners Nationwide</div>
           </div>
