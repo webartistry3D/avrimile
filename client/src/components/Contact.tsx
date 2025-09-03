@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
-import contactBg from "../assets/contact-bg.png";
+import contactBg from "../assets/about-bg.png";
 
 const Contact = () => {
   const socialLinks = [
