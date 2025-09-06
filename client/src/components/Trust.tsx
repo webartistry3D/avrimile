@@ -57,34 +57,34 @@ const Trust = () => {
 
         {/* Trust Signals Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="p-6 rounded-xl shadow-lg bg-white hover:shadow-xl transition">
+          <div className="p-6 rounded-xl shadow-lg bg-white/30 hover:shadow-xl transition">
             <ShieldCheck className="w-12 h-12 text-avrimile-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-avrimile-secondary mb-2">Secure & Reliable</h3>
-            <p className="text-avrimile-muted text-sm">
+            <p className="text-avrimile-secondary text-sm">
               Every package is handled with utmost care and transparency.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl shadow-lg bg-white hover:shadow-xl transition">
+          <div className="p-6 rounded-xl shadow-lg bg-white/30 hover:shadow-xl transition">
             <Users className="w-12 h-12 text-avrimile-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-avrimile-secondary mb-2">50+ Clients</h3>
-            <p className="text-avrimile-muted text-sm">
+            <p className="text-avrimile-secondary text-sm">
               Growing partnerships with SMEs and enterprises across Nigeria.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl shadow-lg bg-white hover:shadow-xl transition">
+          <div className="p-6 rounded-xl shadow-lg bg-white/30 hover:shadow-xl transition">
             <Award className="w-12 h-12 text-avrimile-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-avrimile-secondary mb-2">Industry Certified</h3>
-            <p className="text-avrimile-muted text-sm">
+            <p className="text-avrimile-secondary text-sm">
               Recognized for excellence and compliance in logistics operations.
             </p>
           </div>
 
-          <div className="p-6 rounded-xl shadow-lg bg-white hover:shadow-xl transition">
+          <div className="p-6 rounded-xl shadow-lg bg-white/30 hover:shadow-xl transition">
             <Star className="w-12 h-12 text-avrimile-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-avrimile-secondary mb-2">4.9/5 Rating</h3>
-            <p className="text-avrimile-muted text-sm">
+            <p className="text-avrimile-secondary text-sm">
               Consistently delivering outstanding service and customer satisfaction.
             </p>
           </div>
