@@ -46,7 +46,7 @@ const Contact = () => {
       id="contact" 
       className="py-16 lg:py-24 relative bg-fixed bg-cover bg-center bg-no-repeat flex justify-center items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${contactBg})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${contactBg})`
       }}
     >
       <div className="max-w-3xl w-full px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
